@@ -1,4 +1,4 @@
-# fe-first-assignment
+# vue-fe
 
 ## Project setup
 ```
