@@ -1,0 +1,43 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $base-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  background-color: $body-background;
+}
+
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .sidebar-container {
+    width: 80px;
+    height: calc(100vh);
+    transition: 0.3s ease-in-out;
+    background-color: $light-color;
+    border-right: 1px solid $sidebar-border;
+  }
+
+  .content-container {
+    padding: 0 20px;
+    width: calc(100% - (82px + 40px));
+    transition: 0.3s ease-in-out;
+  }
+
+  &.app-sidebar-expanded {
+    .sidebar-container {
+      width: 230px;
+    }
+
+    .content-container {
+      width: calc(100% - (232px + 40px));
+    }
+  }
+}
